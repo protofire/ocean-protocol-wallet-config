@@ -1,0 +1,313 @@
+{
+    "aquariusTokensURL": "https://aquarius.oceanprotocol.com/api/v1/aquarius/assets/query",
+    "aquariusTokenURL": "https://aquarius.oceanprotocol.com/api/v1/aquarius/assets/ddo/",
+    "subgraphURL": "https://subgraph.{%network%}.oceanprotocol.com/subgraphs/name/oceanprotocol/ocean-subgraph",
+    "subgraphPoolURL": "https://subgraph.{%network%}.oceanprotocol.com/subgraphs/name/oceanprotocol/ocean-subgraph",
+    "providerFileinfoURL": "https://provider.mainnet.oceanprotocol.com/api/v1/services/fileinfo",
+    "coingeckoPriceURL": "https://api.coingecko.com/api/v3/simple/price?ids={%ids%}&vs_currencies={%currencies%}",
+    "etherscanTXsURL" : "{%domain%}?module=account&action=txlist&address={%address%}&startblock=0&endblock=99999999&sort=desc&apikey={%key%}",
+    "downloadTokenURL": "https://provider.{%network%}.oceanprotocol.com/api/v1/services/download",
+    "downloadTokenPayload": "?fileIndex={%index%}&documentId={%did%}&serviceId=1&serviceType=access&dataToken={%token%}&transferTxId={%transaction%}&consumerAddress={%address%}&signature={%signature%}",
+    "nonceURL": "https://provider.rinkeby.oceanprotocol.com/api/v1/services/nonce?userAddress={%address%}",
+    "supportedCurrencies": "EUR,USD",
+    "networks": {
+        "mainnet": {
+            "blockTime": 15,
+            "oceanTokenAddress": "0x967da4048cD07aB37855c090aAF366e4ce1b9F48",
+            "nativeToken":
+            {
+                "address": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+                "decimals": 18,
+                "name": "Ether",
+                "symbol": "ETH"
+            },
+            "tokens": [
+                {
+                    "address": "0x967da4048cD07aB37855c090aAF366e4ce1b9F48",
+                    "decimals": 18,
+                    "name": "Ocean Token",
+                    "symbol": "OCEAN"
+                }, {
+                    "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+                    "decimals": 18,
+                    "name": "Tether",
+                    "symbol": "USDT"
+                }, {
+                    "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+                    "decimals": 18,
+                    "name": "USD Coin",
+                    "symbol": "USDC"
+                }, {
+                    "address": "0x3845badAde8e6dFF049820680d1F14bD3903a5d0",
+                    "decimals": 18,
+                    "name": "The Sandbox",
+                    "symbol": "SAND"
+                }, {
+                    "address": "0x4Fabb145d64652a948d72533023f6E7A623C7C53",
+                    "decimals": 18,
+                    "name": "Binance USD",
+                    "symbol": "BUSD"
+                }, {
+                    "address": "0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce",
+                    "decimals": 18,
+                    "name": "Shiba Inu",
+                    "symbol": "SHIB"
+                }, {
+                    "address": "0xa0b73e1ff0b80914ab6fe0444e65848c4c34450b",
+                    "decimals": 18,
+                    "name": "Crypto.com Coin",
+                    "symbol": "CRO"
+                }, {
+                    "address": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+                    "decimals": 18,
+                    "name": "Wrapped Bitcoin",
+                    "symbol": "WBTC"
+                }, {
+                    "address": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+                    "decimals": 18,
+                    "name": "Uniswap",
+                    "symbol": "UNI"
+                }, {
+                    "address": "0x514910771af9ca656af840dff83e8264ecf986ca",
+                    "decimals": 18,
+                    "name": "Chainlink",
+                    "symbol": "LINK"
+                }, {
+                    "address": "0x0f5d2fb29fb7d3cfee444a200298f468908cc942",
+                    "decimals": 18,
+                    "name": "Decentraland",
+                    "symbol": "MANA"
+                }, {
+                    "address": "0x15D4c048F83bd7e37d49eA4C83a07267Ec4203dA",
+                    "decimals": 18,
+                    "name": "Gala",
+                    "symbol": "GALA"
+                }, {
+                    "address": "0x0d8775f648430679a709e98d2b0cb6250d2887ef",
+                    "decimals": 18,
+                    "name": "Basic Attention Token",
+                    "symbol": "BAT"
+                }, {
+                    "address": "0xf629cbd94d3791c9250152bd8dfbdf380e2a3b9c",
+                    "decimals": 18,
+                    "name": "Enjin Coin",
+                    "symbol": "ENJ"
+                }, {
+                    "address": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                    "decimals": 18,
+                    "name": "Wrapped BNB",
+                    "symbol": "WBNB"
+                }, {
+                    "address": "0x2b591e99afe9f32eaa6214f7b7629768c40eeb39",
+                    "decimals": 18,
+                    "name": "HEX",
+                    "symbol": "HEX"
+                }
+            ],
+            "oceanContracts": {
+                "DTFactory": "0x57317f97E9EA49eBd19f7c9bB7c180b8cDcbDeB9",
+                "BFactory": "0xbe0083053744ECb871510C88dC0f6b77Da162706",
+                "FixedRateExchange": "0x608d05214E42722B94a54cF6114d4840FCfF84e1",
+                "Metadata": "0x1a4b70d8c9DcA47cD6D0Fb3c52BB8634CA1C0Fdf",
+                "Ocean": "0x967da4048cD07aB37855c090aAF366e4ce1b9F48"
+            }
+        },
+        "kovan": {
+            "blockTime": 5,
+            "oceanTokenAddress": "",
+            "nativeToken":
+            {
+                "address": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+                "decimals": 18,
+                "name": "Ether",
+                "symbol": "ETH"
+            },
+            "tokens": [
+                {
+                    "address": "0x2d12186fbb9f9a8c28b3ffdd4c42920f8539d738",
+                    "decimals": 18,
+                    "name": "Basic Attention Token",
+                    "symbol": "BAT"
+                }, {
+                    "address": "0xad5ce863ae3e4e9394ab43d4ba0d80f419f61789",
+                    "decimals": 18,
+                    "name": "Chainlink",
+                    "symbol": "LINK"
+                }, {
+                    "address": "0x738dc6380157429e957d223e6333dc385c85fec7",
+                    "decimals": 18,
+                    "name": "Decentraland",
+                    "symbol": "MANA"
+                }, {
+                    "address": "0x4c6e1efc12fdfd568186b7baec0a43fffb4bcccf",
+                    "decimals": 18,
+                    "name": "Binance USD",
+                    "symbol": "BUSD"
+                }, {
+                    "address": "0xc64f90cd7b564d3ab580eb20a102a8238e218be2",
+                    "decimals": 18,
+                    "name": "Enjin Coin",
+                    "symbol": "ENJ"
+                }, {
+                    "address": "0xd1b98b6607330172f1d991521145a22bce793277",
+                    "decimals": 18,
+                    "name": "Wrapped Bitcoin",
+                    "symbol": "WBTC"
+                }, {
+                    "address": "0x13512979ade267ab5100878e2e0f485b568328a4",
+                    "decimals": 18,
+                    "name": "Tether",
+                    "symbol": "USDT"
+                }, {
+                    "address": "0xe22da380ee6b445bb8273c81944adeb6e8450422",
+                    "decimals": 18,
+                    "name": "USD Coin",
+                    "symbol": "USDC"
+                }
+            ],
+            "oceanContracts": {
+                "DTFactory": "",
+                "BFactory": "",
+                "FixedRateExchange": "",
+                "Metadata": "",
+                "Ocean": ""
+            }
+        },
+        "rinkeby": {
+            "blockTime": 15,
+            "oceanTokenAddress": "0x8967BCF84170c91B0d24D4302C2376283b0B3a07",
+            "nativeToken":
+            {
+                "address": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+                "decimals": 18,
+                "name": "Ether",
+                "symbol": "ETH"
+            },
+            "tokens": [
+                {
+                    "address": "0x8967BCF84170c91B0d24D4302C2376283b0B3a07",
+                    "decimals": 18,
+                    "name": "Ocean Token",
+                    "symbol": "OCEAN"
+                }, {
+                    "address": "0xd92e713d051c37ebb2561803a3b5fbabc4962431",
+                    "decimals": 6,
+                    "name": "Tether",
+                    "symbol": "USDT"
+                }, {
+                    "address": "0x01be23585060835e02b77ef475b0cc51aa1e0709",
+                    "decimals": 18,
+                    "name": "ChainLink Token",
+                    "symbol": "LINK"
+                }, {
+                    "address": "0x725d648E6ff2B8C44c96eFAEa29b305e5bb1526a",
+                    "decimals": 18,
+                    "name": "Decentraland",
+                    "symbol": "MANA"
+                }
+            ],
+            "oceanContracts": {
+                "DTFactory": "0x3fd7A00106038Fb5c802c6d63fa7147Fe429E83a",
+                "BFactory": "0x53eDF9289B0898e1652Ce009AACf8D25fA9A42F8",
+                "FixedRateExchange": "0xeD1DfC5F3a589CfC4E8B91C1fbfC18FC6699Fbde",
+                "Metadata": "0xFD8a7b6297153397B7eb4356C47dbd381d58bFF4",
+                "Ocean": "0x8967BCF84170c91B0d24D4302C2376283b0B3a07"
+            },
+            "gnosisContracts": {
+                "GnosisSafeProxyFactory": "0xa6B71E26C5e0845f74c812102Ca7114b6a896AB2",
+                "GnosisSafe": "0xd9Db270c1B5E3Bd161E8c8503c55cEABeE709552"
+            }
+        },
+        "ropsten": {
+            "blockTime": 15,
+            "oceanTokenAddress": "0x5e8dcb2afa23844bcc311b00ad1a0c30025aade9",
+            "nativeToken":
+            {
+                "address": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+                "decimals": 18,
+                "name": "Ether",
+                "symbol": "ETH"
+            },
+            "tokens": [
+                {
+                    "address": "0x5e8dcb2afa23844bcc311b00ad1a0c30025aade9",
+                    "decimals": 18,
+                    "name": "Ocean Token",
+                    "symbol": "OCEAN"
+                }
+            ],
+            "oceanContracts": {
+                "DTFactory": "0x6ebcCa6df2CAba986FCF44E64Ee82251c1455Dcc",
+                "BFactory": "0x75be6e18c80A487C8b49663bf14f80A6495045B2",
+                "FixedRateExchange": "0xA7a711A09396DF82D9be46A26B48BafdB9BB4fA6",
+                "Metadata": "0x3cd7Ef1F207E1a46AAd7D5d7F5f0A5cF081Fc726",
+                "Ocean": "0x5e8DCB2AfA23844bcc311B00Ad1A0C30025aADE9"
+            }
+        },
+        "polygon-mainnet": {
+            "blockTime": 1,
+            "oceanTokenAddress": "0x8967BCF84170c91B0d24D4302C2376283b0B3a07",
+            "nativeToken":
+            {
+                "address": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+               "decimals": 18,
+               "name": "MATIC",
+               "symbol": "MATIC"
+            },
+            "tokens": [
+                {
+                    "address": "0x282d8efCe846A88B159800bd4130ad77443Fa1A1",
+                    "decimals": 18,
+                    "name": "Ocean Token",
+                    "symbol": "OCEAN"
+                }
+            ],
+            "oceanContracts": {
+                "DTFactory": "0xF6410bf5d773C7a41ebFf972f38e7463FA242477",
+                "BFactory": "0x69B6E54Ad2b3c2801d11d8Ad56ea1d892555b776",
+                "FixedRateExchange": "0x2112Eb973af1DBf83a4f11eda82f7a7527D7Fde5",
+                "Metadata": "0x80E63f73cAc60c1662f27D2DFd2EA834acddBaa8",
+                "Ocean": "0x282d8efCe846A88B159800bd4130ad77443Fa1A1"
+            }
+        },
+        "polygon-mumbai": {
+            "blockTime": 1,
+            "oceanTokenAddress": "",
+            "nativeToken":
+            {
+                "address": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+               "decimals": 18,
+               "name": "MATIC",
+               "symbol": "MATIC"
+            },
+            "tokens": [
+                {
+                    "address": "0xd8992Ed72C445c35Cb4A2be468568Ed1079357c8",
+                    "decimals": 18,
+                    "name": "Ocean Token",
+                    "symbol": "OCEAN"
+                }, {
+                    "address": "0x326c977e6efc84e512bb9c30f76e30c160ed06fb",
+                    "decimals": 18,
+                    "name": "ChainLink Token",
+                    "symbol": "LINK"
+                }
+            ],
+            "oceanContracts": {
+                "DTFactory": "",
+                "BFactory": "",
+                "FixedRateExchange": "",
+                "Metadata": "",
+                "Ocean": ""
+            }
+        }
+    },
+    "aquariusParamGetRecentDatatokens": {"sort":{"created":"desc"},"from":"{%from%}","query":{"bool":{"must":[{"bool":{"should":[{"query_string":{"fields":["id","publicKey.owner","dataToken","dataTokenInfo.name","dataTokenInfo.symbol","service.attributes.main.name^10","service.attributes.main.author","service.attributes.additionalInformation.description","service.attributes.additionalInformation.tags"],"phrase_slop":2,"boost":5,"minimum_should_match":"2<75%","query":""}},{"query_string":{"fields":["id","publicKey.owner","dataToken","dataTokenInfo.name","dataTokenInfo.symbol","service.attributes.main.name^10","service.attributes.main.author","service.attributes.additionalInformation.description","service.attributes.additionalInformation.tags"],"boost":5,"query":"*","lenient":true}},{"match_phrase":{"content":{"query":"","boost":10}}},{"query_string":{"query":"**","fields":["id","publicKey.owner","dataToken","dataTokenInfo.name","dataTokenInfo.symbol","service.attributes.main.name^10","service.attributes.main.author","service.attributes.additionalInformation.description","service.attributes.additionalInformation.tags"],"default_operator":"AND"}}]}},{"match":{"service.attributes.main.type":"dataset OR algorithm"}},{"match":{"service.type":"access OR compute"}},{"query_string":{"query":"chainId:{%chainId%}"}},{"term":{"isInPurgatory":false}}]}},"size":"{%size%}"},
+    "aquariusParamGetPoolDatatokens": {"query":{"query_string":{"query":"( {%pools%} ) AND (chainId:{%chainId%}) AND -isInPurgatory:true","fields":["dataToken"]}},"size":"{%size%}"},
+    "aquariusParamGetMyDatatokens": {"query":{"query_string":{"query":"(publicKey.owner:0xd89cc0d4ae57edc17399286a8bc9729823c8d77c) AND (service.attributes.main.type:dataset OR algorithm) AND (service.type:access OR compute) AND (chainId:{%chainId%})"}},"sort":{"created":"desc"},"from":"{%from%}","size":"{%size%}"},
+    "subgraphParamHighestLiquidity": {"query":"query HighestLiquidityAssets {\n  pools(where: {datatokenReserve_gte: 1}, orderBy: oceanReserve, orderDirection: desc, first: {%first%}) {\n    id\n    datatokenAddress\n    valueLocked\n    oceanReserve\n    __typename\n  }\n}\n","operationName":"HighestLiquidityAssets","variables":{}},
+    "subgraphParamFixedPrice": {"query": "query AssetFrePrice($datatoken: String) {\n  fixedRateExchanges(orderBy: id, where: {datatoken: $datatoken}) {\n    rate\n    id\n    __typename\n  }\n}\n","operationName":"AssetFrePrice","variables":{"datatoken": "{%address%}"}},
+    "subgraphParamPoolPrice": {"query": "query AssetPoolPrice($datatokenAddress: String) {\n  pools(where: {datatokenAddress: $datatokenAddress}) {\n    id\n    spotPrice\n    consumePrice\n    datatokenAddress\n    datatokenReserve\n    oceanReserve\n    __typename\n  }\n}\n","operationName":"AssetPoolPrice","variables":{"datatokenAddress": "{%address%}"}},
+    "subgraphParamPoolLiquidity": {"query": "query PoolLiquidity($id: ID!, $shareId: ID) {\n  pool(id: $id) {\n    id\n    totalWeight\n    totalShares\n    swapFee\n    spotPrice\n    tokens {\n      address\n      symbol\n      isDatatoken\n      balance\n      denormWeight\n      __typename\n    }\n    shares(where: {id: $shareId}) {\n      id\n      balance\n      __typename\n    }\n    __typename\n  }\n}\n","operationName":"PoolLiquidity","variables":{"id": "{%address%}", "shareId": "{%shareId%}"}},
+    "subgraphParamDatatokenPurchased": {"query":"query PreviousOrder($id: String!, $account: String!) {\n  tokenOrders(first: 1, where: {datatokenId: $id, payer: $account}, orderBy: timestamp, orderDirection: desc) {\n    timestamp\n    tx\n  }\n}\n","operationName":"PreviousOrder","variables":{"id": "{%id%}", "account": "{%account%}"}}
+}
