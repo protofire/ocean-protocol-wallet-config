@@ -14,6 +14,7 @@
         "mainnet": {
             "blockTime": 15,
             "oceanTokenAddress": "0x967da4048cD07aB37855c090aAF366e4ce1b9F48",
+            "marketFeeCollector": "0x88b598F48a9fe3c316B9372601A40753556AECA2",
             "nativeToken":
             {
                 "address": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
@@ -115,6 +116,7 @@
         "kovan": {
             "blockTime": 5,
             "oceanTokenAddress": "",
+            "marketFeeCollector": "",
             "nativeToken":
             {
                 "address": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
@@ -176,6 +178,7 @@
         "rinkeby": {
             "blockTime": 15,
             "oceanTokenAddress": "0x8967BCF84170c91B0d24D4302C2376283b0B3a07",
+            "marketFeeCollector": "0x88b598F48a9fe3c316B9372601A40753556AECA2",
             "nativeToken":
             {
                 "address": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
@@ -221,6 +224,7 @@
         "ropsten": {
             "blockTime": 15,
             "oceanTokenAddress": "0x5e8dcb2afa23844bcc311b00ad1a0c30025aade9",
+            "marketFeeCollector": "0x88b598F48a9fe3c316B9372601A40753556AECA2",
             "nativeToken":
             {
                 "address": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
@@ -247,6 +251,7 @@
         "polygon-mainnet": {
             "blockTime": 1,
             "oceanTokenAddress": "0x8967BCF84170c91B0d24D4302C2376283b0B3a07",
+            "marketFeeCollector": "0x88b598F48a9fe3c316B9372601A40753556AECA2",
             "nativeToken":
             {
                 "address": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
@@ -273,6 +278,7 @@
         "polygon-mumbai": {
             "blockTime": 1,
             "oceanTokenAddress": "",
+            "marketFeeCollector": "",
             "nativeToken":
             {
                 "address": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
@@ -304,7 +310,7 @@
     },
     "aquariusParamGetRecentDatatokens": {"sort":{"created":"desc"},"from":"{%from%}","query":{"bool":{"must":[{"bool":{"should":[{"query_string":{"fields":["id","publicKey.owner","dataToken","dataTokenInfo.name","dataTokenInfo.symbol","service.attributes.main.name^10","service.attributes.main.author","service.attributes.additionalInformation.description","service.attributes.additionalInformation.tags"],"phrase_slop":2,"boost":5,"minimum_should_match":"2<75%","query":""}},{"query_string":{"fields":["id","publicKey.owner","dataToken","dataTokenInfo.name","dataTokenInfo.symbol","service.attributes.main.name^10","service.attributes.main.author","service.attributes.additionalInformation.description","service.attributes.additionalInformation.tags"],"boost":5,"query":"*","lenient":true}},{"match_phrase":{"content":{"query":"","boost":10}}},{"query_string":{"query":"**","fields":["id","publicKey.owner","dataToken","dataTokenInfo.name","dataTokenInfo.symbol","service.attributes.main.name^10","service.attributes.main.author","service.attributes.additionalInformation.description","service.attributes.additionalInformation.tags"],"default_operator":"AND"}}]}},{"match":{"service.attributes.main.type":"dataset OR algorithm"}},{"match":{"service.type":"access OR compute"}},{"query_string":{"query":"chainId:{%chainId%}"}},{"term":{"isInPurgatory":false}}]}},"size":"{%size%}"},
     "aquariusParamGetPoolDatatokens": {"query":{"query_string":{"query":"( {%pools%} ) AND (chainId:{%chainId%}) AND -isInPurgatory:true","fields":["dataToken"]}},"size":"{%size%}"},
-    "aquariusParamGetMyDatatokens": {"query":{"query_string":{"query":"(publicKey.owner:0xd89cc0d4ae57edc17399286a8bc9729823c8d77c) AND (service.attributes.main.type:dataset OR algorithm) AND (service.type:access OR compute) AND (chainId:{%chainId%})"}},"sort":{"created":"desc"},"from":"{%from%}","size":"{%size%}"},
+    "aquariusParamGetMyDatatokens": {"query":{"query_string":{"query":"(publicKey.owner:{%owner%}) AND (service.attributes.main.type:dataset OR algorithm) AND (service.type:access OR compute) AND (chainId:{%chainId%})"}},"sort":{"created":"desc"},"from":"{%from%}","size":"{%size%}"},
     "subgraphParamHighestLiquidity": {"query":"query HighestLiquidityAssets {\n  pools(where: {datatokenReserve_gte: 1}, orderBy: oceanReserve, orderDirection: desc, first: {%first%}) {\n    id\n    datatokenAddress\n    valueLocked\n    oceanReserve\n    __typename\n  }\n}\n","operationName":"HighestLiquidityAssets","variables":{}},
     "subgraphParamFixedPrice": {"query": "query AssetFrePrice($datatoken: String) {\n  fixedRateExchanges(orderBy: id, where: {datatoken: $datatoken}) {\n    rate\n    id\n    __typename\n  }\n}\n","operationName":"AssetFrePrice","variables":{"datatoken": "{%address%}"}},
     "subgraphParamPoolPrice": {"query": "query AssetPoolPrice($datatokenAddress: String) {\n  pools(where: {datatokenAddress: $datatokenAddress}) {\n    id\n    spotPrice\n    consumePrice\n    datatokenAddress\n    datatokenReserve\n    oceanReserve\n    __typename\n  }\n}\n","operationName":"AssetPoolPrice","variables":{"datatokenAddress": "{%address%}"}},
