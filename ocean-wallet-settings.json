@@ -9,6 +9,7 @@
     "downloadTokenURL": "https://provider.{%network%}.oceanprotocol.com/api/v1/services/download",
     "downloadTokenPayload": "?fileIndex={%index%}&documentId={%did%}&serviceId=1&serviceType=access&dataToken={%token%}&transferTxId={%transaction%}&consumerAddress={%address%}&signature={%signature%}",
     "nonceURL": "https://provider.rinkeby.oceanprotocol.com/api/v1/services/nonce?userAddress={%address%}",
+    "multipleWalletsColors": ["#7B1173", "#4C389A", "#10639E","#0E9AA3", "#5FB359", "#899318", "#ECBC12", "#FF9900", "#D23B5F", "#5F2D2D"],
     "supportedCurrencies": "EUR,USD",
     "networks": {
         "mainnet": {
