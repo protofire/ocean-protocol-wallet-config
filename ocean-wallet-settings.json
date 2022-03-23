@@ -14,6 +14,7 @@
     "networks": {
         "mainnet": {
             "blockTime": 15,
+            "chainId":1,
             "oceanTokenAddress": "0x967da4048cD07aB37855c090aAF366e4ce1b9F48",
             "marketFeeCollector": "0x88b598F48a9fe3c316B9372601A40753556AECA2",
             "nativeToken":
@@ -116,6 +117,7 @@
         },
         "kovan": {
             "blockTime": 5,
+            "chainId":42,
             "oceanTokenAddress": "",
             "marketFeeCollector": "",
             "nativeToken":
@@ -178,6 +180,7 @@
         },
         "rinkeby": {
             "blockTime": 15,
+            "chainId":4,
             "oceanTokenAddress": "0x8967BCF84170c91B0d24D4302C2376283b0B3a07",
             "marketFeeCollector": "0x88b598F48a9fe3c316B9372601A40753556AECA2",
             "nativeToken":
@@ -224,6 +227,7 @@
         },
         "ropsten": {
             "blockTime": 15,
+            "chainId":3,
             "oceanTokenAddress": "0x5e8dcb2afa23844bcc311b00ad1a0c30025aade9",
             "marketFeeCollector": "0x88b598F48a9fe3c316B9372601A40753556AECA2",
             "nativeToken":
@@ -251,6 +255,7 @@
         },
         "polygon-mainnet": {
             "blockTime": 1,
+            "chainId":137,
             "oceanTokenAddress": "0x8967BCF84170c91B0d24D4302C2376283b0B3a07",
             "marketFeeCollector": "0x88b598F48a9fe3c316B9372601A40753556AECA2",
             "nativeToken":
@@ -278,6 +283,7 @@
         },
         "polygon-mumbai": {
             "blockTime": 1,
+            "chainId":80001,
             "oceanTokenAddress": "",
             "marketFeeCollector": "",
             "nativeToken":
